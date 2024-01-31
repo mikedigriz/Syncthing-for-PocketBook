@@ -1,5 +1,5 @@
 # Syncthing-for-PocketBook
-Launch Syncthing on PocketBook 
+Launch [Syncthing](https://syncthing.net/) on PocketBook 
 
 <p align="center">
     <img src="res/good.jpg" width="60%">
