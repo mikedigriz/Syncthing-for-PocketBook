@@ -18,7 +18,7 @@ Launch Syncthing on PocketBook
 
 - Скопировать *syncthing.app* в `ext1\applications`
 
-- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.27.2/syncthing-linux-arm64-v1.27.2.tar.gz)
+- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.27.2/syncthing-linux-arm-v1.27.2.tar.gz)
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (24mb размер)
 
