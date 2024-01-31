@@ -1,0 +1,8 @@
+<configuration version="37">
+    <gui enabled="true" tls="false" debugging="false">
+        <address>0.0.0.0:8384</address>
+    </gui>
+    <options>
+        <startBrowser>false</startBrowser>
+    </options>
+</configuration>
