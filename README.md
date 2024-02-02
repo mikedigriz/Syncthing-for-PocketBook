@@ -22,6 +22,17 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (24mb размер)
 
+### Настройка иконки
+
+Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations?tab=readme-ov-file#adding-custom-app-icons-images) только если уверены и сделали бэкап изменяемых файлов.<br>
+Нужно аккуратно дописать *view.json* вашего устройства и скопировать *icons*
+
+<details> <summary>Должно получиться так:</summary>
+ <p align="center">
+    <img src="res/icon_example_display.jpg" width="35%">
+</p> 
+</details> 
+
 ## Примечания
 Чтобы все заработало после включения нужно врубить вай-фай и запустить приложение @syncthing.<br> Далее оно будет работать незримо.<br>Чтобы папки подцепились нужно задать игнорирование прав.<br> Подробнее в ссылке ниже.
 
@@ -32,3 +43,5 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 [Root for PB740](https://www.mobileread.com/forums/showthread.php?t=325185)
 
 [PocketBookTerminal](http://users.physik.fu-berlin.de/~jtt/PB/)
+
+[Create 8bit bmp icon for PocketBook](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
