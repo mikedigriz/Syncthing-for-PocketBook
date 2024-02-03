@@ -14,9 +14,9 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 
 - Создать папку *syncthing* во внутренней памяти `ext1\applications\syncthing`
 
-- Скопировать конфиг *config.xml* в `ext1\applications\syncthing`
+- Скопировать конфиг [*config.xml*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/config.xml) в `ext1\applications\syncthing`
 
-- Скопировать *syncthing.app* в `ext1\applications`
+- Скопировать [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) в `ext1\applications`
 
 - Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.27.2/syncthing-linux-arm-v1.27.2.tar.gz)
 
@@ -25,7 +25,7 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 ### Настройка иконки
 
 Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations?tab=readme-ov-file#adding-custom-app-icons-images) только если уверены и сделали бэкап изменяемых файлов.<br>
-Нужно аккуратно отредактировать *view.json* вашего устройства и скопировать *icons*
+Нужно аккуратно дописать [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/view.json) вашего устройства и скопировать *icons*
 
 <details> <summary>Должно получиться так:</summary>
  <p align="center">
@@ -44,4 +44,4 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 
 [PocketBookTerminal](http://users.physik.fu-berlin.de/~jtt/PB/)
 
-[Create 8bit bmp icon for PocketBook](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
+[Convert to 8bit bmp icon](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
