@@ -24,7 +24,7 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 
 ### Настройка иконки
 
-Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations?tab=readme-ov-file#adding-custom-app-icons-images) только если уверены и сделали бэкап изменяемых файлов.<br>
+Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) только если уверены и сделали бэкап изменяемых файлов.<br>
 Нужно аккуратно дописать [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/view.json) вашего устройства и скопировать *icons*
 
 <details> <summary>Должно получиться так:</summary>
