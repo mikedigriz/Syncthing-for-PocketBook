@@ -1,4 +1,4 @@
-#!/ebrmain/bin/run_script -clear_screen -bitmap=browser_logo
+#!/ebrmain/bin/run_script -clear_screen -bitmap=ci_autosync_cloud &
 /ebrmain/bin/dialog 1 "" "Syncthing started" "OK"
 
 # Magic!
