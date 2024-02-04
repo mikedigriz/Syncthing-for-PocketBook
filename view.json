@@ -62,8 +62,7 @@
                     "PB_Onleihe",
                     "PB_Player",
                     "PB_RSSNews",
-                    "PB_Settings",
-                    "U_syncthing"
+                    "PB_Settings"
                 ]
             },
             {
@@ -72,7 +71,8 @@
                 "apps": [
                     "PB_Dropbox",
                     "PB_Cloud",
-                    "PB_SendToPB"
+                    "PB_SendToPB",
+                    "U_syncthing"			
                 ]
             },
             {
