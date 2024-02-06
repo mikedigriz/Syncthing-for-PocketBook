@@ -31,6 +31,34 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
  <p align="center">
     <img src="res/icon_example_display.jpg" width="35%">
 </p> 
+
+Добавлены 2 записи U_syncthing в `/system/config/desktop/view.json`
+
+Между "applications" и "_comment":
+```json
+    "applications": {
+        "U_syncthing": {
+			"path": "/mnt/ext1/applications/syncthing.app",
+			"title": "Syncthing",
+			"icon": "/mnt/ext1/applications/icons/syncthing_app.bmp",
+			"focused_icon": "/mnt/ext1/applications/icons/syncthing_app_f.bmp"
+		},
+        "_comment":
+ ```
+
+В секцию Services:
+```json
+            {
+                "title": "@Services",
+                "sort": "title",
+                "apps": [
+                    "PB_Dropbox",
+                    "PB_Cloud",
+                    "PB_SendToPB",
+                    "U_syncthing"			
+                ]
+            },
+```
 </details> 
 
 ## Примечания
