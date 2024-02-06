@@ -42,6 +42,4 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 
 [Root for PB740](https://www.mobileread.com/forums/showthread.php?t=325185)
 
-[PocketBookTerminal](http://users.physik.fu-berlin.de/~jtt/PB/)
-
 [Convert to 8bit bmp icon](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
