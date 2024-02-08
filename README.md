@@ -71,3 +71,5 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 [Root for PB740](https://www.mobileread.com/forums/showthread.php?t=325185)
 
 [Convert to 8bit bmp icon](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
+
+Отдельное спасибо [форуму](https://forum.syncthing.net/t/pls-release-a-version-for-pocketbook/21370/) за дополнения!
