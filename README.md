@@ -1,11 +1,5 @@
-# Syncthing-for-PocketBook
-Launch [Syncthing](https://syncthing.net/) on PocketBook 
-
-<p align="center">
-    <img src="res/good.jpg" width="60%">
-</p>
-
-
+[![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
+## Launch [Syncthing](https://syncthing.net/) on PocketBook 
 Протестировано на PB740<br>
 Версия ПО U740.6.5.1379<br>
 Версия Syncthing v1.27.2, Linux (32-bit ARM)
@@ -70,7 +64,12 @@ Launch [Syncthing](https://syncthing.net/) on PocketBook
 - Настроить папку, задать игнорирование прав
 
 
-Дополнительные детали в ссылках ниже.
+<details> <summary>Пример настроек из веб-панели</summary>
+<p align="center">
+    <img src="res/good.jpg" width="100%">
+</p>
+</details> 
+
 
 ## Ссылки
 
