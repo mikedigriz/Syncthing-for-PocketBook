@@ -53,6 +53,9 @@
                 ]
             },
 ```
+
+Скопированы иконки syncthing_app.bmp, syncthing_app_f.bmp в `/mnt/ext1/applications/icons/`
+
 </details> 
 
 ## Использование
