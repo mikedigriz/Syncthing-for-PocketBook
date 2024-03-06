@@ -16,6 +16,20 @@
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (24mb размер)
 
+
+```
+│── applications
+|    │── syncthing
+|    │   │── syncthing
+|    │   └── config.xml
+|    │
+|    │── icons
+|    │   │── syncthing_app_f.bmp
+|    │   └── syncthing_app.bmp
+|    │
+|    └── syncthing.app
+```
+
 ### Настройка иконки
 
 Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) только если уверены и сделали бэкап изменяемых файлов.<br>
