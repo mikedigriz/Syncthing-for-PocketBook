@@ -1,7 +1,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Launch [Syncthing](https://syncthing.net/) on PocketBook 
 Протестировано на PB740<br>
-Версия ПО U740.6.5.1379<br>
+Версия ПО U740.6.8.2461<br>
 Версия Syncthing v1.27.2, Linux (32-bit ARM)
 
 ## Установка
