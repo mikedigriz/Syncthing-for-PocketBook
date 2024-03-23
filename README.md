@@ -40,6 +40,7 @@
     <img src="res/icon_example_display.jpg" width="35%">
 </p> 
 ROOT не нужен. Системные папки скрыты.
+	
 Добавлены 2 записи U_syncthing в `/system/config/desktop/view.json`
 
 Между "applications" и "_comment":
