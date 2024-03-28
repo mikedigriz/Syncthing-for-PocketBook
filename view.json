@@ -1,5 +1,5 @@
 {
-    "version": "4",
+    "version": "6",
     "applications": {
         "U_syncthing": {
 			"path": "/mnt/ext1/applications/syncthing.app",
@@ -56,6 +56,7 @@
                     "PB_Calendar",
                     "PB_Calc",
                     "PB_Dictionary",
+                    "PB_Digital_Frame",
                     "PB_Gallery",
                     "PB_Library",
                     "PB_Notes",
@@ -72,7 +73,8 @@
                     "PB_Dropbox",
                     "PB_Cloud",
                     "PB_SendToPB",
-                    "U_syncthing"			
+                    "PB_Bookstore2empikgo",
+                    "U_syncthing"
                 ]
             },
             {
@@ -83,7 +85,8 @@
                     "PB_Painter",
                     "PB_Klondike",
                     "PB_Scribble",
-                    "PB_Sudoku"
+                    "PB_Sudoku",
+                    "PB_Snake"
                 ]
             }
         ]
