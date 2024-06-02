@@ -41,7 +41,9 @@ Syncthing v1.27.6, Linux version (32-bit ARM)
 
 ### Changing the Icon
 
-Do this [step](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) only if you have made a backup of the file being modified.<br>
+> [!IMPORTANT]\
+> Do this [step](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) only if you have made a backup of the file being modified.<br>
+
 Change file [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/view.json) of your device and copy the icons
 
 <details> <summary>It should look like this:</summary>
