@@ -1,5 +1,14 @@
+<p align="right">
+  <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/README.en.md">
+    <img src="https://img.shields.io/badge/lang-en-red.svg" alt="en">
+  </a>
+    <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/README.md">
+    <img src="https://img.shields.io/badge/lang-ru-blue.svg" alt="ru">
+  </a>
+</p>
+
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
-## Launch [Syncthing](https://syncthing.net/) on PocketBook 
+## Запуск [Syncthing](https://syncthing.net/) на PocketBook 
 Протестировано на PB740<br>
 Версия ПО U740.6.8.2461<br>
 Версия Syncthing v1.27.6, Linux (32-bit ARM)
@@ -32,7 +41,9 @@
 
 ### Настройка иконки
 
-Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) только если сделали бэкап изменяемого файла.<br>
+> [!IMPORTANT]\
+> Делайте этот [шаг](https://github.com/jjrrw174/PocketBook-Desktop-and-App-Customizations/tree/16ae9294fafe287319311cca4e97675d66606a1d?tab=readme-ov-file#adding-custom-app-icons-images) только если сделали бэкап изменяемого файла.
+
 Измените файл [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/view.json) своего устройства и скопируйте значки
 
 <details> <summary>Должно получиться так:</summary>
