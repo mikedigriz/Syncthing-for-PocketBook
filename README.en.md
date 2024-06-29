@@ -10,8 +10,8 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Launch [Syncthing](https://syncthing.net/) on PocketBook 
 Tested on PB740<br>
-The software version is U740.6.8.2461<br>
-Syncthing v1.27.6, Linux version (32-bit ARM)
+The software version is 6.8.3455<br>
+Syncthing v1.27.8, Linux version (32-bit ARM)
 
 ## Installation
 
@@ -21,7 +21,7 @@ Syncthing v1.27.6, Linux version (32-bit ARM)
 
 - Copy [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) to `ext1\applications`
 
-- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.27.6/syncthing-linux-arm-v1.27.6.tar.gz)
+- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.27.8/syncthing-linux-arm-v1.27.8.tar.gz)
 
 - Extract to created folder `ext1\applications\syncthing\` binary file - *syncthing* (25mb size)
 
