@@ -107,7 +107,6 @@ Each open book has its own directory with the necessary lua-files, which makes i
 
 [Install Syncthing on PocketBook](https://blog.tastytea.de/posts/syncthing-on-pocketbook/)
 
-[Root for PB740](https://www.mobileread.com/forums/showthread.php?t=325185)
 
 [Convert to 8bit bmp icon](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
 
