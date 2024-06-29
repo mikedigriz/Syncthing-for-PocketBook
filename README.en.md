@@ -9,10 +9,9 @@
 
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Launch [Syncthing](https://syncthing.net/) on PocketBook 
-Tested on PB740<br>
-The software version is 6.8.3455<br>
-Syncthing v1.27.8, Linux version (32-bit ARM)
-
+Tested on PB740 v6.8.3455<br>
+Syncthing v1.27.8, Linux version (32-bit ARM)<br>
+Also works on Era Color (PB700K3)
 ## Installation
 
 - Create a *syncthing* folder in internal memory `ext1\applications\syncthing`
