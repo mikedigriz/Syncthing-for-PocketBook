@@ -10,7 +10,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Запуск [Syncthing](https://syncthing.net/) на PocketBook 
 Протестировано на PB740 (InkPad 3) v6.8.4473<br>
-Версия Syncthing v1.29.3, Linux (32-bit ARM)<br>
+Версия Syncthing v1.29.5, Linux (32-bit ARM)<br>
 Также работает на Era Color (PB700K3)
 
 Этот репозиторий содержит инструкции по установке и настройке программы Syncthing на PocketBook. Syncthing — это программа для синхронизации файлов между устройствами через интернет или локальную сеть. В данном случае, она позволяет синхронизировать книги и другие документы между вашим PocketBook и другими устройствами, такими как компьютер или смартфон. Данные только ваши, и хранятся только на ваших устройствах. 
@@ -22,7 +22,7 @@
 
 - Скопировать [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) в `ext1\applications`
 
-- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.29.3/syncthing-linux-arm-v1.29.3.tar.gz)
+- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.29.5/syncthing-linux-arm-v1.29.5.tar.gz)
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (25mb размер)
 
