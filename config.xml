@@ -1,5 +1,5 @@
-<configuration version="37">
-    <gui enabled="true" tls="false" debugging="false">
+<configuration version="50">
+    <gui enabled="true" tls="false" debugging="false" sendBasicAuthPrompt="false">
         <address>0.0.0.0:8384</address>
     </gui>
     <options>

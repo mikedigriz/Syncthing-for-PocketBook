@@ -10,7 +10,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Launch [Syncthing](https://syncthing.net/) on PocketBook 
 Tested on PB740 (InkPad 3) v6.8.4473<br>
-Syncthing v1.29.5, Linux version (32-bit ARM)<br>
+Syncthing v2.0.0-rc.21, Linux version (32-bit ARM)<br>
 Also works on:
 \
 \-  PocketBook 700 Era Color (PB700K3)
@@ -18,6 +18,14 @@ Also works on:
 \-  PocketBook 650 check issue [#6](https://github.com/mikedigriz/Syncthing-for-PocketBook/issues/6)
 
 This repository contains instructions for installing and setting up the Syncthing application on your PocketBook device. Syncthing is a file synchronization program that allows you to sync files between devices over the internet or local network. In this case, it enables you to synchronize books and other documents between your PocketBook and other devices such as a computer or smartphone. Your data remains entirely yours and is stored only on your own devices.
+
+## Migration to Syncthing 2.0
+
+- Change the arguments in syncthing.app to start with `--`
+e.g. `-home` must be given as `--home`
+
+*Rollback is possible, syncthing makes backups of databases and configs itself.*
+
 ## Installation
 
 - Create a *syncthing* folder in internal memory `ext1\applications\syncthing`
@@ -26,7 +34,7 @@ This repository contains instructions for installing and setting up the Syncthin
 
 - Copy [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) to `ext1\applications`
 
-- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v1.29.5/syncthing-linux-arm-v1.29.5.tar.gz)
+- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.0-rc.21/syncthing-linux-arm-v2.0.0-rc.21.tar.gz)
 
 - Extract to created folder `ext1\applications\syncthing\` binary file - *syncthing* (25mb size)
 
@@ -91,7 +99,7 @@ Copied the icons syncthing_app.bmp, syncthing_app_f.bmp to `/mnt/ext1/applicatio
 
 ## Using
 
-After turning on the device, you need to turn on the Wi-Fi and launch the Syncthing application. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted.
+After turning on the device, you need to turn on the Wi-Fi and launch the Syncthing application. Wait about 20 seconds after clicking `OK` on first launch. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted.
 
 *Everything is the same here as on other devices with Syncthing*
 - Open in the browser: `http://your-ip-address:8384`
