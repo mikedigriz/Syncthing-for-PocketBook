@@ -36,7 +36,7 @@
 
 - Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.1/syncthing-linux-arm-v2.0.1.tar.gz)
 
-- Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (25mb размер)
+- Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (31mb размер)
 
 
 ```
