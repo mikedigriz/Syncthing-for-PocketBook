@@ -36,7 +36,7 @@ e.g. `-home` must be given as `--home`
 
 - Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.1/syncthing-linux-arm-v2.0.1.tar.gz)
 
-- Extract to created folder `ext1\applications\syncthing\` binary file - *syncthing* (25mb size)
+- Extract to created folder `ext1\applications\syncthing\` binary file - *syncthing* (31mb size)
 
 
 ```
