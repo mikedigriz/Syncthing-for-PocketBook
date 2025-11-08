@@ -1,7 +1,7 @@
 #!/ebrmain/bin/run_script -clear_screen -bitmap=e3_black_empty_round
 
 manage_app() {
-    /ebrmain/bin/dialog 1 "" "Syncthing работает" @TurnOn @TurnOff @Cancel
+    /ebrmain/bin/dialog 1 "" "Syncthing started" @TurnOn @TurnOff @Cancel
     status="$?"
     echo "$(date '+%Y-%m-%d %H:%M:%S') Dialog exit status: $status" >> /tmp/log.txt
 
