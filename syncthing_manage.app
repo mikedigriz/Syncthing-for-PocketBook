@@ -1,4 +1,4 @@
-#!/ebrmain/bin/run_script -clear_screen -bitmap=e3_black_empty_round
+#!/ebrmain/bin/run_script -clear_screen -bitmap=e3_black_empty_round &
 
 manage_app() {
     /ebrmain/bin/dialog 1 "" "Syncthing started" @TurnOn @TurnOff @Cancel
