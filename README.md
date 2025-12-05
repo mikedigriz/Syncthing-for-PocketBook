@@ -10,7 +10,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Запуск [Syncthing](https://syncthing.net/) на PocketBook 
 Протестировано на PB740 (InkPad 3) v6.8.4473<br>
-Версия Syncthing 2.0.10, Linux (32-bit ARM)<br>
+Версия Syncthing 2.0.12, Linux (32-bit ARM)<br>
 Также работает на:
 \
 \-  PocketBook 700 Era Color (PB700K3)
@@ -34,7 +34,7 @@
 
 - Скопировать [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) в `ext1\applications`
 
-- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.10/syncthing-linux-arm-v2.0.10.tar.gz)
+- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.12/syncthing-linux-arm-v2.0.12.tar.gz)
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (31mb размер)
 
