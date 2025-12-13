@@ -99,7 +99,7 @@ Copied the icons syncthing_app.bmp, syncthing_app_f.bmp to `/mnt/ext1/applicatio
 
 ## Using
 
-After turning on the device, you need to turn on the Wi-Fi and launch the Syncthing application. Wait about 20 seconds after clicking `OK` on first launch. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted.
+After turning on the device, you need to turn on the Wi-Fi and launch the Syncthing application. Wait about 20 seconds after clicking `OK` on first launch. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted. Or you can try an experimental solution [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app)
 
 *Everything is the same here as on other devices with Syncthing*
 - Open in the browser: `http://your-ip-address:8384`
