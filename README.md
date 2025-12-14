@@ -65,7 +65,7 @@
 </p> 
 ROOT не нужен. Системные папки скрыты.
 	
-Добавлены 2 записи U_syncthing в `/system/config/desktop/view.json`
+Добавлены 2 записи U_syncthing в `ext1\system\config\desktop\view.json`
 
 Между "applications" и "_comment":
 ```json
@@ -93,7 +93,7 @@ ROOT не нужен. Системные папки скрыты.
             },
 ```
 
-Скопированы иконки syncthing_app.bmp, syncthing_app_f.bmp в `/mnt/ext1/applications/icons/`
+Скопированы иконки syncthing_app.bmp, syncthing_app_f.bmp в `ext1\applications\icons\`
 
 </details> 
 

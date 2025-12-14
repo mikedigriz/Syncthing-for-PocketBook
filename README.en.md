@@ -65,7 +65,7 @@ Change file [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook
 </p> 
 ROOT is not needed. The system folders are hidden.
 	
-Two entries `U_syncthing` have been added to `/system/config/desktop/view.json`
+Two entries `U_syncthing` have been added to `ext1\system\config\desktop\view.json`
 
 Between "applications" and "_comment":
 ```json
@@ -93,7 +93,7 @@ In Services section:
             },
 ```
 
-Copied the icons syncthing_app.bmp, syncthing_app_f.bmp to `/mnt/ext1/applications/icons/`
+Copied the icons syncthing_app.bmp, syncthing_app_f.bmp to `ext1\applications\icons\`
 
 </details> 
 
