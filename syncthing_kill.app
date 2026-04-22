@@ -4,6 +4,8 @@
 sync
 # kill syncthing app
 killall syncthing 2> /dev/null
+# disable wi-fi
+/ebrmain/bin/netagent net off &> /dev/null &
 # start lib update on bg, but not from user sreader
 /ebrmain/bin/scanner.app &
 timeout -t 3 /ebrmain/bin/dialog 1 '' 'Press OK or just wait!' 'OK'
