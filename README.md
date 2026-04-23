@@ -10,7 +10,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Запуск [Syncthing](https://syncthing.net/) на PocketBook 
 Протестировано на PB740 (InkPad 3) v6.8.4473<br>
-Версия Syncthing 2.0.15, Linux (32-bit ARM)<br>
+Версия Syncthing 2.0.16, Linux (32-bit ARM)<br>
 Также работает на:
 \
 \-  PocketBook 700 Era Color (PB700K3)
@@ -34,7 +34,7 @@
 
 - Скопировать [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) в `ext1\applications`
 
-- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.15/syncthing-linux-arm-v2.0.15.tar.gz)
+- Скачать версию [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.16/syncthing-linux-arm-v2.0.16.tar.gz)
 
 - Извлечь в созданную папку `ext1\applications\syncthing\` бинарь - *syncthing* (31mb размер)
 
@@ -99,7 +99,7 @@ ROOT не нужен. Системные папки скрыты.
 
 ## Использование
 
-После включения устройства нужно включить вай-фай и запустить приложение Syncthing. Первый запуск займет около 20 секунд после нажатия кнопки `ОК`. Далее оно будет работать незримо до выключения. Новые файлы будут видны на главной странице после перезагрузки устройства. Или вы можете попробовать эксперементальное решение [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app)
+Запустите Syncthing. Первый запуск займет около 20 секунд после нажатия кнопки `ОК`. Далее оно будет работать незримо до выключения. Новые файлы будут видны на главной странице после перезагрузки устройства. Или вы можете попробовать эксперементальное решение [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app)
 
 *Здесь все так же как и на других устройствах с Syncthing*
 - Открыть в браузере адрес: `http://your-ip-address:8384`

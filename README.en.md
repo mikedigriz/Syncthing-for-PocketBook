@@ -10,7 +10,7 @@
 [![Syncthing-for-PocketBook](res/syncthing-pb-logo.png)](https://syncthing.net/)
 ## Launch [Syncthing](https://syncthing.net/) on PocketBook 
 Tested on PB740 (InkPad 3) v6.8.4473<br>
-Syncthing 2.0.15, Linux version (32-bit ARM)<br>
+Syncthing 2.0.16, Linux version (32-bit ARM)<br>
 Also works on:
 \
 \-  PocketBook 700 Era Color (PB700K3)
@@ -34,7 +34,7 @@ e.g. `-home` must be given as `--home`
 
 - Copy [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) to `ext1\applications`
 
-- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.15/syncthing-linux-arm-v2.0.15.tar.gz)
+- Download version [Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.0.16/syncthing-linux-arm-v2.0.16.tar.gz)
 
 - Extract to created folder `ext1\applications\syncthing\` binary file - *syncthing* (31mb size)
 
@@ -99,7 +99,7 @@ Copied the icons syncthing_app.bmp, syncthing_app_f.bmp to `ext1\applications\ic
 
 ## Using
 
-After turning on the device, you need to turn on the Wi-Fi and launch the Syncthing application. Wait about 20 seconds after clicking `OK` on first launch. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted. Or you can try an experimental solution [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app)
+Launch the Syncthing application. Wait about 20 seconds after clicking `OK` on first launch. Then it will work invisibly until it is turned off. The new files will be visible on the main page after the device is restarted. Or you can try an experimental solution [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app)
 
 *Everything is the same here as on other devices with Syncthing*
 - Open in the browser: `http://your-ip-address:8384`
