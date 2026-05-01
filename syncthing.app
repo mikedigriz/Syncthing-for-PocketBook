@@ -3,7 +3,6 @@ timeout -t 3 /ebrmain/bin/dialog 1 "" "Syncthing started" "OK"
 
 # Enable Wi-Fi
 /ebrmain/bin/netagent net on &> /dev/null &
-/ebrmain/bin/netagent connect &> /dev/null &
 
 # Magic!
 setsid /mnt/ext1/applications/syncthing/syncthing --home="/mnt/ext1/applications/syncthing" &> /dev/null &
