@@ -19,12 +19,6 @@
 
 Этот репозиторий содержит инструкции по установке и настройке программы Syncthing на PocketBook. Syncthing — это программа для синхронизации файлов между устройствами через интернет или локальную сеть. В данном случае, она позволяет синхронизировать книги и другие документы между вашим PocketBook и другими устройствами, такими как компьютер или смартфон. Данные только ваши, и хранятся только на ваших устройствах.
 
-## Миграция на Syncthing 2.0
-
-- Замените аргументы в syncthing.app чтобы они начинались с `--`
- `-home` должен передаваться как `--home`
-
-*Откат возможен, syncthing делает бэкапы БД и конфигов сам.*
 
 ## Установка
 
@@ -111,6 +105,34 @@ ROOT не нужен. Системные папки скрыты.
     <img src="res/good.jpg" width="100%">
 </p>
 </details> 
+
+## Для Pro (расширенный скрипт)
+
+> [!IMPORTANT]\
+> Этот вариант для тех, кто уже разобрался с обычным [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) и у кого он стабильно работает. Если базовый скрипт ещё не настроен, сначала доведите его до ума, а уже потом возвращайтесь сюда.
+
+Обычный скрипт умеет ровно одно: запустить syncthing. [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) делает больше.
+
+Что в нём удобнее:
+- Тап, запускается. Работает? Тап, показывает статус.
+- В статусе видно: идёт ли синхронизация, когда синхронизировались в последний раз, сколько файлов уже на месте и есть ли ошибки.
+- Открывается шустрее, экран не моргает на каждый тап.
+
+Как перейти:
+
+1. Скопируйте [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) в `ext1\applications`. Можно вместо обычного, можно рядом, прописав ещё одну запись в `view.json`.
+2. Остановите syncthing и поправьте секцию `gui` в `ext1\applications\syncthing\config.xml`:
+
+```xml
+    <gui enabled="true" tls="false" sendBasicAuthPrompt="false">
+        <address>/tmp/syncthing.sock</address>
+    </gui>
+```
+
+3. Для остановки используйте [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app). Убедитесь, что в нём есть строка `rmdir /tmp/syncthing.lock`. `syncthing_pro.app` при запуске ставит блокировку через `mkdir /tmp/syncthing.lock`, чтобы не плодить второй процесс. Если её не снять, syncthing больше не запустится, пока не удалите папку вручную или не перезагрузите устройство.
+
+> [!WARNING]\
+> После этой правки веб-мордочка по адресу `http://your-ip-address:8384` перестанет открываться. Поэтому все папки настройте заранее. Захотите вернуть панель, просто верните обратно адрес `0.0.0.0:8384`.
 
 ### Синхронизация прогресса чтения
 В этой задаче поможет читалка [Koreader](https://github.com/koreader/koreader).

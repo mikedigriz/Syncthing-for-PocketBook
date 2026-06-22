@@ -19,13 +19,6 @@ Also works on:
 
 This repository contains instructions for installing and setting up the Syncthing application on your PocketBook device. Syncthing is a file synchronization program that allows you to sync files between devices over the internet or local network. In this case, it enables you to synchronize books and other documents between your PocketBook and other devices such as a computer or smartphone. Your data remains entirely yours and is stored only on your own devices.
 
-## Migration to Syncthing 2.0
-
-- Change the arguments in syncthing.app to start with `--`
-e.g. `-home` must be given as `--home`
-
-*Rollback is possible, syncthing makes backups of databases and configs itself.*
-
 ## Installation
 
 - Create a *syncthing* folder in internal memory `ext1\applications\syncthing`
@@ -111,6 +104,34 @@ Launch the Syncthing application. Wait about 20 seconds after clicking `OK` on f
     <img src="res/good.jpg" width="100%">
 </p>
 </details> 
+
+## For Pro (advanced script)
+
+> [!IMPORTANT]\
+> This one is for people who already figured out the regular [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) and have it running reliably. If the basic script isn't set up yet, get that working first and come back later.
+
+The regular script does exactly one thing: it starts syncthing. [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) does a bit more.
+
+What's nicer about it:
+- Tap it, it starts. Running? Tap it, it shows the status.
+- The status shows what matters: whether it's syncing, when it last synced, how many files are already in place, and whether there are any errors.
+- It opens quicker and the screen doesn't flash on every tap.
+
+How to switch:
+
+1. Copy [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) to `ext1\applications`. Either in place of the regular one, or next to it with another entry in `view.json`.
+2. Stop syncthing and edit the `gui` section in `ext1\applications\syncthing\config.xml`:
+
+```xml
+    <gui enabled="true" tls="false" sendBasicAuthPrompt="false">
+        <address>/tmp/syncthing.sock</address>
+    </gui>
+```
+
+3. Use [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app) to stop it. Make sure it contains the line `rmdir /tmp/syncthing.lock`. On launch `syncthing_pro.app` takes a lock with `mkdir /tmp/syncthing.lock` so it won't spawn a second process. If the lock isn't released, syncthing won't start again until you delete the folder by hand or reboot the device.
+
+> [!WARNING]\
+> After this edit the web UI at `http://your-ip-address:8384` will stop opening. So set up all your folders beforehand. If you want the panel back, just put the address `0.0.0.0:8384` back.
 
 ### Synchronizing reading progress
 The [Koreader](https://github.com/koreader/koreader) reader will help in this task.
