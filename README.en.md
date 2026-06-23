@@ -57,7 +57,8 @@ Change file [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook
 <details> <summary>It should look like this:</summary>
  <p align="center">
     <img src="res/icon_example_display.jpg" width="35%">
-</p> 
+</p>
+
 ROOT is not needed. The `system` folder with `view.json` is hidden, and turning on hidden files differs from one OS to another:
 - Windows (Explorer): View tab → Show → Hidden items.
 - macOS (Finder): press `Cmd + Shift + .` (period).

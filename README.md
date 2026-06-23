@@ -58,7 +58,8 @@ Syncthing синхронизирует книги и документы межд
 <details> <summary>Должно получиться так:</summary>
  <p align="center">
     <img src="res/icon_example_display.jpg" width="35%">
-</p> 
+</p>
+
 ROOT не нужен. Папка `system` с файлом `view.json` скрытая, и показ скрытых файлов в каждой ОС включается по-своему:
 - Windows (Проводник): вкладка «Вид» → «Показать» → «Скрытые элементы».
 - macOS (Finder): нажмите `Cmd + Shift + .` (точка).
