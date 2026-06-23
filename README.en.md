@@ -52,9 +52,7 @@ Change file [*view.json*](https://github.com/mikedigriz/Syncthing-for-PocketBook
  <p align="center">
     <img src="res/icon_example_display.jpg" width="35%">
 </p> 
-ROOT is not needed. The system folders are hidden.
-
-The `system` folder with `view.json` is hidden. There is no single way to show hidden files across all operating systems, but in each one it's a single action:
+ROOT is not needed. The `system` folder with `view.json` is hidden, and turning on hidden files differs from one OS to another:
 - Windows (Explorer): View tab → Show → Hidden items.
 - macOS (Finder): press `Cmd + Shift + .` (period).
 - Linux (most file managers): press `Ctrl + H`.
@@ -109,8 +107,7 @@ From here it's [the same as on any other device with Syncthing](https://docs.syn
 
 ## For Pro (advanced script)
 
-> [!IMPORTANT]\
-> This one is for people who already figured out the regular [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) and have it running reliably. If the basic script isn't set up yet, get that working first and come back later.
+This one is for people who already figured out the regular [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app) and have it running reliably. If the basic script isn't set up yet, get that working first and come back later.
 
 The regular script does exactly one thing: it starts syncthing. [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) does a bit more.
 
@@ -133,10 +130,9 @@ How to switch:
 3. Stop syncthing only with [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app).
 
 > [!WARNING]\
-> On launch `syncthing_pro.app` takes a lock (`mkdir /tmp/syncthing.lock`) so it won't spawn a second process, and `syncthing_kill.app` releases it with `rmdir /tmp/syncthing.lock`. So stop it only with that app. If you stop it any other way (just turning off Wi-Fi, say), the lock stays behind and the next tap on `syncthing_pro.app` silently does nothing, until you delete the folder by hand or reboot the device. See the [Lock](SCRIPTS.en.md#the-lock) section for details.
+> On launch `syncthing_pro.app` takes a lock, and only `syncthing_kill.app` releases it. So stop it only with that app. If you stop it any other way (turning off Wi-Fi, say), the lock stays behind and the next tap on `syncthing_pro.app` silently does nothing until you reboot the device. See the [Lock](SCRIPTS.en.md#the-lock) section for details.
 
-> [!WARNING]\
-> After this edit the web panel at `http://your-ip-address:8384` will stop opening. So set up all your folders beforehand. If you want the panel back, just put the address `0.0.0.0:8384` back.
+After this edit the web panel at `http://your-ip-address:8384` will stop opening, so set up all your folders beforehand. To get the panel back, put the address `0.0.0.0:8384` back.
 
 ### Synchronizing reading progress
 The [Koreader](https://github.com/koreader/koreader) reader will help in this task.
@@ -146,7 +142,6 @@ Each open book has its own directory with the necessary lua-files, which makes i
 ## Links
 
 [Install Syncthing on PocketBook](https://blog.tastytea.de/posts/syncthing-on-pocketbook/)
-
 
 [Convert to 8bit bmp icon](https://gist.github.com/mikedigriz/6830eaaedcbba99afbe216c3d9195c06)
 
