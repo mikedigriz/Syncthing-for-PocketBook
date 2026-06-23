@@ -26,7 +26,7 @@ Syncthing синхронизирует книги и документы межд
 
 ## Установка
 
-1. На [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest) скачайте архив для Linux 32-bit ARM и достаньте из него только сам бинарь `syncthing` (~24 МБ), остальное не нужно.
+1. На [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest) найдите файл с именем `syncthing-linux-arm-v2.*.*.tar.gz`, скачайте его и достаньте из архива только сам бинарь `syncthing` (~24 МБ), остальное не нужно.
 
 2. Создайте папку `ext1\applications\syncthing` и положите туда:
    - бинарь `syncthing`
