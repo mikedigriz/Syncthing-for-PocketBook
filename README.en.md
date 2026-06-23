@@ -123,6 +123,19 @@ What's nicer about it:
 - The status shows what matters: whether it's syncing, when it last synced, how many files are already in place, and whether there are any errors.
 - It opens quicker and the screen doesn't flash on every tap.
 
+The status dialog itself looks like this:
+
+```
++---------------------------+----------------------+
+| Key                       | Value                |
++---------------------------+----------------------+
+| Sync status               | Syncing / Idle       |
+| Last sync                 | 14:32                |
+| File count                | 1,245 files          |
+| Errors                    | None / 1 error       |
++---------------------------+----------------------+
+```
+
 How to switch:
 
 1. Copy [*syncthing_pro.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_pro.app) to `ext1\applications`. Either in place of the regular one, or next to it with another entry in `view.json`.
