@@ -1,4 +1,7 @@
 <p align="right">
+  <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/docs/SCRIPTS.en.md">
+    <img src="https://img.shields.io/badge/docs-script%20notes-green.svg" alt="docs">
+  </a>
   <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/README.en.md">
     <img src="https://img.shields.io/badge/lang-en-red.svg" alt="en">
   </a>
