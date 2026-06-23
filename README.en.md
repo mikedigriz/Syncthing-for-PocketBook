@@ -126,15 +126,13 @@ What's nicer about it:
 The status dialog itself looks like this:
 
 ```
-+---------------------------+----------------------+
-| Key                       | Value                |
-+---------------------------+----------------------+
-| Sync status               | Syncing / Idle       |
-| Last sync                 | 14:32                |
-| File count                | 1,245 files          |
-| Errors                    | None / 1 error       |
-+---------------------------+----------------------+
+Up to date
+Last Sync: 14:32
+Files: 1250 of 1250 synced
+Errors: 0
 ```
+
+Instead of `Up to date` you may see `Syncing files...`, `Scanning files...`, `Cleaning up...`, `Sync error`, or `Status unknown` if the API didn't respond.
 
 How to switch:
 
