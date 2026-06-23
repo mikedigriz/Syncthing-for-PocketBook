@@ -1,4 +1,7 @@
 <p align="right">
+  <a href="https://github.com/syncthing/syncthing/releases/latest">
+    <img src="https://img.shields.io/github/v/release/syncthing/syncthing?label=syncthing" alt="latest syncthing release">
+  </a>
   <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/docs/SCRIPTS.md">
     <img src="https://img.shields.io/badge/docs-script%20notes-green.svg" alt="docs">
   </a>
@@ -23,7 +26,7 @@ Syncthing синхронизирует книги и документы межд
 
 ## Установка
 
-1. Скачайте [Syncthing для Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-linux-arm-v2.1.1.tar.gz) и достаньте из архива только сам бинарь `syncthing` (~24 МБ), остальное не нужно.
+1. На [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest) скачайте архив для Linux 32-bit ARM и достаньте из него только сам бинарь `syncthing` (~24 МБ), остальное не нужно.
 
 2. Создайте папку `ext1\applications\syncthing` и положите туда:
    - бинарь `syncthing`

@@ -1,4 +1,7 @@
 <p align="right">
+  <a href="https://github.com/syncthing/syncthing/releases/latest">
+    <img src="https://img.shields.io/github/v/release/syncthing/syncthing?label=syncthing" alt="latest syncthing release">
+  </a>
   <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/docs/SCRIPTS.en.md">
     <img src="https://img.shields.io/badge/docs-script%20notes-green.svg" alt="docs">
   </a>
@@ -22,7 +25,7 @@ Syncthing keeps your books and documents in sync between your PocketBook and you
 
 ## Installation
 
-1. Download [Syncthing for Linux 32-bit ARM](https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-linux-arm-v2.1.1.tar.gz) and take just the `syncthing` binary (~24 MB) out of the archive, the rest is not needed.
+1. On the [Syncthing releases page](https://github.com/syncthing/syncthing/releases/latest), download the Linux 32-bit ARM archive and take just the `syncthing` binary (~24 MB) out of it, the rest is not needed.
 
 2. Create the folder `ext1\applications\syncthing` and put there:
    - the `syncthing` binary
