@@ -1,6 +1,6 @@
 #!/ebrmain/bin/run_script -bitmap=ci_autosync_cloud &
 #
-# See SCRIPTS.md for why this file needs CRLF and trailing ";" everywhere.
+# See docs/SCRIPTS.md for why this file needs CRLF and trailing ";" everywhere.
 #
 APP_DIR="/mnt/ext1/applications/syncthing";
 CONFIG="$APP_DIR/config.xml";

@@ -130,7 +130,7 @@ How to switch:
 3. Stop syncthing only with [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app).
 
 > [!WARNING]\
-> On launch `syncthing_pro.app` takes a lock, and only `syncthing_kill.app` releases it. So stop it only with that app. If you stop it any other way (turning off Wi-Fi, say), the lock stays behind and the next tap on `syncthing_pro.app` silently does nothing until you reboot the device. See the [Lock](SCRIPTS.en.md#the-lock) section for details.
+> On launch `syncthing_pro.app` takes a lock, and only `syncthing_kill.app` releases it. So stop it only with that app. If you stop it any other way (turning off Wi-Fi, say), the lock stays behind and the next tap on `syncthing_pro.app` silently does nothing until you reboot the device. See the [Lock](docs/SCRIPTS.en.md#the-lock) section for details.
 
 After this edit the web panel at `http://your-ip-address:8384` will stop opening, so set up all your folders beforehand. To get the panel back, put the address `0.0.0.0:8384` back.
 
@@ -138,6 +138,12 @@ After this edit the web panel at `http://your-ip-address:8384` will stop opening
 The [Koreader](https://github.com/koreader/koreader) reader will help in this task.
 
 Each open book has its own directory with the necessary lua-files, which makes it possible to read between devices.
+
+## Not working?
+
+**The web panel won't open in the browser.** Check that Wi-Fi is on and the computer is on the same network as the reader, and that the address is exactly `http://<reader-IP>:8384` (no https). From a computer you can test the connection with `curl http://<reader-IP>:8384`, and the error code shows up in the browser under F12 → Network. If you switched to Pro and `config.xml` points to `/tmp/syncthing.sock`, the panel is disabled on purpose, that is not a fault.
+
+**How to stop syncthing and save battery.** It doesn't appear in the app list because it runs in the background. Stop it with [*syncthing_kill.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing_kill.app) (which also refreshes the library) or by restarting the device. Wi-Fi turns on at start and off on stop by itself, so the network won't drain the battery while idle.
 
 ## Links
 

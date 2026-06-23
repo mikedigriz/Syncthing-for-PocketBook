@@ -1,8 +1,8 @@
 <p align="right">
-  <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/SCRIPTS.en.md">
+  <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/docs/SCRIPTS.en.md">
     <img src="https://img.shields.io/badge/lang-en-red.svg" alt="en">
   </a>
-    <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/SCRIPTS.md">
+    <a href="https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/docs/SCRIPTS.md">
     <img src="https://img.shields.io/badge/lang-ru-blue.svg" alt="ru">
   </a>
 </p>
@@ -32,3 +32,13 @@
 `syncthing_pro.app` при запуске ставит блокировку через `mkdir /tmp/syncthing.lock`. Это защита от повторного запуска: если папка уже есть, `mkdir` падает и скрипт выходит, не плодя второй процесс.
 
 Важно: снимает блокировку `syncthing_kill.app` строкой `rmdir /tmp/syncthing.lock`. Если её убрать, после остановки лок останется на месте, и `syncthing_pro.app` больше не запустится, пока вы не удалите папку вручную или не перезагрузите устройство.
+
+## Отладка на устройстве
+
+Чтобы заглянуть внутрь и понять, почему скрипт падает, пригодятся:
+- [pb-terminal](https://github.com/CatInBeard/pb-terminal): терминал прямо на ридере.
+- [pbsshd](https://www.mobileread.com/forums/attachment.php?attachmentid=123724&d=1402034568): доступ по SSH.
+- [rsh](https://www.mobileread.com/forums/showthread.php?t=116350&highlight=pocketbook+rsh): ещё один способ зайти в шелл.
+- [root для устройства](https://www.mobileread.com/forums/showthread.php?t=325185): опасно, можно сломать устройство.
+
+Содержимое бинарников смотрите командой `strings`, например `strings /ebrmain/bin/netagent`. Так удобно подсмотреть, какие команды и пути доступны в прошивке (особенно полезно на старых моделях, где набор команд другой).
