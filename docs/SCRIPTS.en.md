@@ -9,23 +9,10 @@
 
 # Script notes
 
-This explains why `syncthing_pro.app` looks odd. Keep it in mind if you edit it, otherwise the script will stop launching.
+## syncthing_pro.app
 
-## Why so many `\r`
-
-PocketBook's `run_script` needs CRLF line endings. Don't save the file as LF.
-
-Because of that, almost every line has its quirks:
-
-- Each line ends with `;`. That closes the command, and the leftover `\r` just fails as an empty command without breaking anything.
-- Check the exit code (`$?`) on the same line as the command. On the next line it would already be wrong, overwritten by that same `\r`.
-- Blank lines aren't really blank, they have a `#`. A truly empty line is just a `\r`, and ash trips over it.
-- Don't split `if/then/fi` and the like across lines. A stray `\r` on a keyword breaks parsing for the whole file.
-
-## Everything else
-
-- The status comes over the unix socket `/tmp/syncthing.sock`, not TCP. The script runs in a network sandbox and can't see `127.0.0.1` or the network, only files.
-- Only `ERR` lines go to the log, otherwise it would grow forever.
+- **Status queries**: sends requests over the unix socket `/tmp/syncthing.sock`, not TCP. The script runs in a network sandbox and can't see `127.0.0.1` or the network, only files and sockets.
+- **Logging**: only lines containing `ERR` are written to `syncthing.log`, otherwise the file would grow unbounded on the device's limited storage.
 
 ## The lock
 
