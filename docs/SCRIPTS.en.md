@@ -29,3 +29,17 @@ To look inside and figure out why a script fails, these come in handy:
 - [root for the device](https://www.mobileread.com/forums/showthread.php?t=325185): dangerous, it may break the device.
 
 Inspect binaries with `strings`, for example `strings /ebrmain/bin/netagent`. It's a handy way to see which commands and paths the firmware actually has (especially useful on older models where the command set differs).
+
+## Line endings in scripts
+
+> [!IMPORTANT]\
+> All script files (`.app`, `.sh`) MUST use **LF** (Line Feed, `\n`), not CRLF (Carriage Return + Line Feed, `\r\n`).
+
+On Windows, Git by default converts LF to CRLF and vice versa, but PocketBook scripts require strictly LF. Using CRLF will break the scripts.
+
+**How to check and fix:**
+- **VS Code**: click `CRLF` in the bottom right corner → select `LF`
+- **Sublime Text**: Menu → View → Line Endings → Unix (LF)
+- **Other editors**: check their line ending settings
+
+Git automatically converts line endings according to [.gitattributes](.gitattributes), but it's better to verify your editor settings.
