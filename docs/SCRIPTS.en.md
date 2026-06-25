@@ -11,14 +11,31 @@
 
 ## syncthing_pro.app
 
-- **Status queries**: sends requests over the unix socket `/tmp/syncthing.sock`, not TCP. The script runs in a network sandbox and can't see `127.0.0.1` or the network, only files and sockets.
-- **Logging**: only lines containing `ERR` are written to `syncthing.log`, otherwise the file would grow unbounded on the device's limited storage.
+- **Logging**: only lines containing `ERR` are written to `syncthing.log`,
+  otherwise the file would grow unbounded on the device's limited storage.
+- **Status**: queries Syncthing through the REST API and shows current state
+  of all folders.
+
+## How status works
+
+The script queries Syncthing through the REST API and shows you the whole picture
+across all folders at once. If even one folder has an error or is still syncing,
+that's what the headline shows. Paused folders appear as a separate line and don't
+change the overall status (pausing is intentional, not a problem).
+
+Status checks only run when the daemon is already running and don't interfere
+with startup or shutdown.
 
 ## The lock
 
-On launch `syncthing_pro.app` takes a lock with `mkdir /tmp/syncthing.lock`. It guards against a second launch: if the folder already exists, `mkdir` fails and the script exits instead of spawning a second process.
+On launch `syncthing_pro.app` takes a lock with `mkdir /tmp/syncthing.lock`.
+It guards against a second launch: if the folder already exists, `mkdir` fails
+and the script exits instead of spawning a second process.
 
-Important: the lock is released by `syncthing_kill.app` with `rmdir /tmp/syncthing.lock`. Remove that line and the lock stays behind after you stop syncthing, so `syncthing_pro.app` won't start again until you delete the folder by hand or reboot the device.
+Important: the lock is released by `syncthing_kill.app` with
+`rmdir /tmp/syncthing.lock`. Remove that line and the lock stays behind
+after you stop syncthing, so `syncthing_pro.app` won't start again until
+you delete the folder by hand or reboot the device.
 
 ## Debugging on the device
 
@@ -28,18 +45,23 @@ To look inside and figure out why a script fails, these come in handy:
 - [rsh](https://www.mobileread.com/forums/showthread.php?t=116350&highlight=pocketbook+rsh): another way into the shell.
 - [root for the device](https://www.mobileread.com/forums/showthread.php?t=325185): dangerous, it may break the device.
 
-Inspect binaries with `strings`, for example `strings /ebrmain/bin/netagent`. It's a handy way to see which commands and paths the firmware actually has (especially useful on older models where the command set differs).
+Inspect binaries with `strings`, for example `strings /ebrmain/bin/netagent`.
+It's a handy way to see which commands and paths the firmware actually has
+(especially useful on older models where the command set differs).
 
 ## Line endings in scripts
 
 > [!IMPORTANT]\
-> All script files (`.app`, `.sh`) MUST use **LF** (Line Feed, `\n`), not CRLF (Carriage Return + Line Feed, `\r\n`).
+> All script files (`.app`, `.sh`) MUST use **LF** (Line Feed, `\n`),
+> not CRLF (Carriage Return + Line Feed, `\r\n`).
 
-On Windows, Git by default converts LF to CRLF and vice versa, but PocketBook scripts require strictly LF. Using CRLF will break the scripts.
+On Windows, Git by default converts LF to CRLF and vice versa,
+but PocketBook scripts require strictly LF. Using CRLF will break the scripts.
 
 **How to check and fix:**
 - **VS Code**: click `CRLF` in the bottom right corner → select `LF`
 - **Sublime Text**: Menu → View → Line Endings → Unix (LF)
 - **Other editors**: check their line ending settings
 
-Git automatically converts line endings according to [.gitattributes](.gitattributes), but it's better to verify your editor settings.
+Git automatically converts line endings according to
+[.gitattributes](.gitattributes), but it's better to verify your editor settings.
