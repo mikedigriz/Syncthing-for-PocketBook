@@ -1,12 +1,13 @@
 #!/ebrmain/bin/run_script -bitmap=ci_autosync_cloud &
 # Advanced Syncthing launcher: show live status when running, or start if stopped.
 # See docs/SCRIPTS.md for details on the lock mechanism.
+# Note: REST API parsing assumes Syncthing 2.x format.
 APP_DIR="/mnt/ext1/applications/syncthing"
 CONFIG="$APP_DIR/config.xml"
 SOCK="/tmp/syncthing.sock"
 LOCK="/tmp/syncthing.lock"
 DIALOG="/ebrmain/bin/dialog"
-WAIT="timeout -t 3"
+WAIT="timeout -t 3"  # Tuned for quick status scan; adjust if API responses are slow
 
 # Already running: show live status, then exit
 pidof syncthing > /dev/null

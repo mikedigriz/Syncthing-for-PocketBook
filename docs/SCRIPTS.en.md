@@ -14,7 +14,7 @@
 - **Logging**: only lines containing `ERR` are written to `syncthing.log`,
   otherwise the file would grow unbounded on the device's limited storage.
 - **Status**: queries Syncthing through the REST API and shows current state
-  of all folders.
+  of all folders. REST API parsing assumes Syncthing 2.x format.
 
 ## How status works
 
@@ -25,6 +25,11 @@ change the overall status (pausing is intentional, not a problem).
 
 Status checks only run when the daemon is already running and don't interfere
 with startup or shutdown.
+
+**Important note on timeouts**: the 3-second timeout in `syncthing_pro.app`
+is tuned for quick API scans over a local Unix socket. If your device's API
+responses are slow or you have many folders, you may need to increase this value
+to avoid the script timing out prematurely.
 
 ## The lock
 

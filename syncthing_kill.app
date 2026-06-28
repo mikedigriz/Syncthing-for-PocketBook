@@ -10,6 +10,6 @@ rmdir /tmp/syncthing.lock 2> /dev/null
 /ebrmain/bin/netagent net off &> /dev/null &
 # start lib update on bg, but not from user sreader
 /ebrmain/bin/scanner.app &
-sleep 3
+sleep 3  # Tuned for quick scan; adjust if scanner startup is slow
 # kill all u=reader scan processes on bg
 killall scanner.app &> /dev/null &
