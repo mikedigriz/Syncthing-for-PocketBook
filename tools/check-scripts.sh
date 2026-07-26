@@ -36,7 +36,9 @@ for f in *.app; do
     { printf '#!/bin/sh\n'; tail -n +2 "$f"; } > "$tmp"
     sh -n "$tmp" || err "$f" 'синтаксическая ошибка sh'
     if command -v shellcheck > /dev/null 2>&1; then
-        shellcheck -s sh -S warning "$tmp" || err "$f" 'shellcheck'
+        # SC3020: `&>` не POSIX, но скрипты годами работают на busybox ash
+        # устройства, менять их ради линта не буду
+        shellcheck -s sh -S warning -e SC3020 "$tmp" || err "$f" 'shellcheck'
     fi
     rm -f "$tmp"
 done
