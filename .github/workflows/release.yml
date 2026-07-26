@@ -1,0 +1,54 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Определить версию
+        id: ver
+        run: |
+          set -eu
+          case "${{ github.ref }}" in
+            refs/tags/*) v="${{ github.ref_name }}" ;;
+            *)           v="dev-$(git rev-parse --short HEAD)" ;;
+          esac
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+
+      - name: Собрать архив
+        run: sh tools/build-release.sh "${{ steps.ver.outputs.version }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: syncthing-for-pocketbook-${{ steps.ver.outputs.version }}
+          path: dist/*.zip
+          if-no-files-found: error
+
+      - name: Опубликовать релиз
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.zip
+            dist/*.sha256
+          generate_release_notes: true
+          body: |
+            Распакуйте архив и следуйте `INSTALL-RU.txt` (`INSTALL.txt` in English).
+
+            Бинарь `syncthing` в архив не входит: качайте его на
+            [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest)
+            (`syncthing-linux-arm-v2.*.*.tar.gz`, 32-bit ARM) и кладите
+            в `applications/syncthing/`.

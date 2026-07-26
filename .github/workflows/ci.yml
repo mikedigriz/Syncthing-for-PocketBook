@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Проверить скрипты и конфиги
+        run: sh tools/check-scripts.sh
+
+      - name: Пробная сборка архива
+        run: sh tools/build-release.sh "pr-${{ github.run_number }}"
+
+      - name: Показать содержимое архива
+        run: unzip -l dist/*.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview-pr-${{ github.run_number }}
+          path: dist/*.zip
+          if-no-files-found: error
+          retention-days: 7

@@ -29,18 +29,33 @@ Syncthing синхронизирует книги и документы межд
 
 ## Установка
 
-1. На [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest)
-   найдите файл с именем `syncthing-linux-arm-v2.*.*.tar.gz`, скачайте его
-   и достаньте из архива только сам бинарь `syncthing` (~24 МБ),
-   остальное не нужно.
+Нужны две вещи: файлы этого проекта и бинарь syncthing. Первое лежит
+готовым архивом, второе качается у авторов Syncthing.
 
-2. Создайте папку `ext1\applications\syncthing` и положите туда:
-   - бинарь `syncthing`
-   - конфиг [*config.xml*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/config.xml)
+1. Скачайте и распакуйте
+   [архив проекта](https://github.com/mikedigriz/Syncthing-for-PocketBook/releases/latest)
+   `syncthing-for-pocketbook-*.zip`: там уже готовая структура папок,
+   скрипты и иконки.
 
-3. Положите [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app)
-   в `ext1\applications`.
+2. На [странице релизов Syncthing](https://github.com/syncthing/syncthing/releases/latest)
+   возьмите `syncthing-linux-arm-v2.*.*.tar.gz`, достаньте оттуда только
+   бинарь `syncthing` (~24 МБ) и положите его в `applications/syncthing/`
+   распакованного архива. Остальное из tar.gz не нужно.
 
+3. Скопируйте папку `applications` в корень карты памяти (ext1). Что
+   делают скрипты:
+   - `syncthing.app` - запуск
+   - `syncthing_kill.app` - остановка и обновление библиотеки
+   - `reboot.app` - перезагрузка устройства
+
+4. Иконка в меню - по желанию, см. следующий раздел. Без неё скрипты
+   всё равно запускаются из проводника.
+
+<details> <summary>Тем, кто ставит вручную, без архива</summary>
+
+Тот же результат руками: возьмите бинарь `syncthing` (шаг 2 выше),
+[*config.xml*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/config.xml)
+и нужные `.app` из репозитория, разложите так:
 
 ```
 │── applications
@@ -54,6 +69,8 @@ Syncthing синхронизирует книги и документы межд
 |    │
 |    └── syncthing.app
 ```
+
+</details>
 
 ### Настройка иконки
 

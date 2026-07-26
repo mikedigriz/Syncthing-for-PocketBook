@@ -28,18 +28,34 @@ Your data stays entirely yours and is stored only on your own devices.
 
 ## Installation
 
-1. On the [Syncthing releases page](https://github.com/syncthing/syncthing/releases/latest),
-   find the file named `syncthing-linux-arm-v2.*.*.tar.gz`, download it,
-   and take just the `syncthing` binary (~24 MB) out of the archive,
-   the rest is not needed.
+Two things are needed: the files of this project and the syncthing binary.
+The first comes as a ready archive, the second from the Syncthing authors.
 
-2. Create the folder `ext1\applications\syncthing` and put there:
-   - the `syncthing` binary
-   - the config [*config.xml*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/config.xml)
+1. Download and unpack the
+   [project archive](https://github.com/mikedigriz/Syncthing-for-PocketBook/releases/latest)
+   `syncthing-for-pocketbook-*.zip`: folder structure, scripts and icons
+   are already in place.
 
-3. Put [*syncthing.app*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/syncthing.app)
-   into `ext1\applications`.
+2. On the [Syncthing releases page](https://github.com/syncthing/syncthing/releases/latest)
+   grab `syncthing-linux-arm-v2.*.*.tar.gz`, take just the `syncthing`
+   binary (~24 MB) out of it and put it into `applications/syncthing/`
+   of the unpacked archive. The rest of the tar.gz is not needed.
 
+3. Copy the `applications` folder to the root of your memory card (ext1).
+   What the scripts do:
+   - `syncthing.app` - start
+   - `syncthing_kill.app` - stop and refresh the library
+   - `reboot.app` - reboot the device
+
+4. The menu icon is optional, see the next section. Without it the scripts
+   still run from the file explorer.
+
+<details> <summary>For those installing by hand, without the archive</summary>
+
+Same result manually: take the `syncthing` binary (step 2 above),
+[*config.xml*](https://github.com/mikedigriz/Syncthing-for-PocketBook/blob/main/config.xml)
+and the `.app` files you need from the repository, and lay them out
+like this:
 
 ```
 │── applications
@@ -53,6 +69,8 @@ Your data stays entirely yours and is stored only on your own devices.
 |    │
 |    └── syncthing.app
 ```
+
+</details>
 
 ### Changing the Icon
 

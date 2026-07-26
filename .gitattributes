@@ -1,3 +1,5 @@
 *.app text eol=lf
 *.sh text eol=lf
 docs/SCRIPTS.* text eol=lf
+*.yml text eol=lf
+.gitignore text eol=lf
