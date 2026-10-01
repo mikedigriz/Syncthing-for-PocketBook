@@ -20,7 +20,8 @@
 Also works on:
 - PocketBook 700 Era Color (PB700K3)
 - PocketBook 650, check [issue #6](https://github.com/mikedigriz/Syncthing-for-PocketBook/issues/6)
-- Pocketbook 623, check [issue #17](https://github.com/mikedigriz/Syncthing-for-PocketBook/issues/17)
+- PocketBook 634 Verse Pro
+- PocketBook 623, check [issue #17](https://github.com/mikedigriz/Syncthing-for-PocketBook/issues/17)
 
 Syncthing keeps your books and documents in sync between your PocketBook
 and your other devices (computer, smartphone) over the internet or a local network.
